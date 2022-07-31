@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 //6d18e3c5
-const API_URL = `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_MOVIE_KEY}`;
+export const API_URL = `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_MOVIE_KEY}`;
 const AppContext = React.createContext();
 
 //provider

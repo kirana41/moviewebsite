@@ -1,9 +1,7 @@
-import { getMouseEventOptions } from '@testing-library/user-event/dist/utils';
 import React, { useEffect, useState } from 'react';
 import {NavLink,useParams} from "react-router-dom";
-import { useGlobalContext } from './context'
+import {API_URL} from './context';
 
-const API_URL = `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_MOVIE_KEY}`;
 function SingleMovie() {
  
     const { id } = useParams();
@@ -35,7 +33,7 @@ const getMovies = async(url) =>{
     if (isLoading) {
       return (
         <section className="movie-section ">
-          <div className="loading">Loading....</div>;
+          <div className="loading">Loading...</div>;
         </section>
       );
     }
